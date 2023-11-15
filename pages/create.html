@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>FUNKSHOP</title>
+  </head>
+  <body>
+    <!-- INICIO HEADER-->
+    <header>
+      <nav class="navbar container">
+        <picture class="navbar__logo">
+          <a href="../index.html">
+            <img
+              src="../assets/logo/logo_light_horizontal.svg"
+              alt="logo-funkshop"
+            />
+          </a>
+        </picture>
+        <ul class="navbar__menu">
+          <li class="navbar__item with-submenu">
+            <a href="../pages/shop.html" class="navbar__link">VER TIENDA</a>
+          </li>
+          <li class="navbar__item">
+            <a href="../pages/admin.html" class="navbar__link">ADMIN</a>
+          </li>
+          <li class="navbar__item">
+            <a href="../pages/login.html" class="navbar__link">SALIR</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- FIN HEADER-->
+
+    <!-- INICIO MAIN-->
+    <main class="create-main container">
+      <section class="create">
+        <h3>CREAR NUEVO ITEM</h3>
+        <form class="create-form" action="" method="">
+          <section class="create-form__data-item">
+            <div class="create-form__item">
+              <label class="dropdown" for="categoria">Categoría:</label>
+              <select name="categoria" id="categoria">
+                <option value="STAR WARS">STAR WARS</option>
+                <option value="POKEMON">POKEMON</option>
+                <option value="HARRY POTTER">HARRY POTTER</option>
+              </select>
+              <label class="dropdown" for="Licencia">Licencia:</label>
+              <select class="dropdown-select" name="Licencia" id="Licencia">
+                <option value="STAR WARS">STAR WARS</option>
+                <option value="POKEMON">POKEMON</option>
+                <option value="HARRY POTTER">HARRY POTTER</option>
+              </select>
+            </div>
+            <div class="create-form__item data-product">
+              <label class="create-form-label" for="nombreProducto"
+                >Nombre del producto:</label
+              >
+              <input
+                class="data-input-nombre-producto"
+                type="text"
+                placeholder="Kakashi Hatake Shippuden Saga"
+              />
+            </div>
+            <div class="create-form__description-product">
+              <textarea
+                name="textarea"
+                rows="10"
+                cols="80"
+                placeholder="Descripcion del producto"
+              >
+  descripcion del producto            
+              </textarea>
+            </div>
+            <div class="create-form__item data-product">
+              <label class="create-form-label" for="sku">SKU:</label>
+              <input class="data-input" type="text" />
+            </div>
+            <div class="create-form__item data-product">
+              <label class="create-form-label" for="precio">Precio:</label>
+              <input class="data-input" type="text" />
+            </div>
+            <div class="create-form__item data-product">
+              <label class="create-form-label" for="stock">Stock:</label>
+              <input class="data-input-stock" type="text" />
+            </div>
+            <div class="create-form__item data-product">
+              <label class="create-form-label" for="sku">Descuento:</label>
+              <input class="data-input-descuento" type="number" />
+            </div>
+            <div class="create-form__item data-product">
+              <label class="create-form-label" for="cuotas">Cuotas:</label>
+              <select class="select-descuento" name="cuotas" id="cuotas">
+                <option value="1">1 Cuota sin interés</option>
+                <option value="3">3 Cuotas sin interés</option>
+                <option value="6">6 Cuotas sin interés</option>
+              </select>
+            </div>
+            <div class="create-form__item data-product imagen">
+              <label class="create-form-label" for="imagen">Imágenes</label>
+              <input class="create-form-label__input-img" type="file" />
+            </div>
+
+            <div class="create-form__button">
+              <button>Agregar Producto</button>
+
+              <button>Limpiar</button>
+            </div>
+          </section>
+        </form>
+      </section>
+    </main>
+    <!-- FIN MAIN-->
+
+    <!-- INICIO FOOTER-->
+    <footer class="footer">
+      <nav class="navbar container">
+        <ul class="navbar__item">
+          <li class="navbar__item">
+            <a class="navbar__link" href="../pages/shop.html">SHOP</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../pages/register.html"
+              >REGISTRARSE</a
+            >
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../pages/login.html">LOGIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../pages/contact.html">CONTACTO</a>
+          </li>
+        </ul>
+        <picture>
+          <img
+            src="../assets/logo/isotype.svg"
+            alt="Isotipo de la marca Funkoshop"
+          />
+        </picture>
+      </nav>
+      <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+    <!-- FIN FOOTER-->
+
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/item.js"></script>
+  </body>
+</html>

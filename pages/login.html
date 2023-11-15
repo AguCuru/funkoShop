@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <!--<link rel="stylesheet" href="./css/Style.css" />-->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    /> -->
+    <!--<link rel="stylesheet" href="./css/cssBootsrap/bootstrap.min.css" />  -->
+    <title>FUNKSHOP</title>
+  </head>
+  <!-- INICIO HEADER-->
+  <header>
+    <nav class="navbar container">
+      <picture class="navbar__logo">
+        <a href="../index.html">
+          <img
+            src="../assets/logo/logo_light_horizontal.svg"
+            alt="logo-funkshop"
+          />
+        </a>
+      </picture>
+      <ul class="navbar__menu">
+        <li class="navbar__item with-submenu">
+          <a href="../pages/shop.html" class="navbar__link">VER TIENDA</a>
+        </li>
+        <li class="navbar__item">
+          <a href="../pages/admin.html" class="navbar__link">ADMIN</a>
+        </li>
+        <li class="navbar__item">
+          <a href="../pages/login.html" class="navbar__link">SALIR</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- FIN HEADER-->
+  <body>
+    <!-- INICIO MAIN-->
+    <main class="main-login container">
+      <section class="login-info container">
+        <h3 class="login-title">INGRESAR A MI CUENTA</h3>
+        <form class="login-form" action="/index.html" method="POST">
+          <label> Email : </label>
+          <input
+            type="email"
+            placeholder="jhondoe@correo.com"
+            name="email"
+            required
+          />
+          <label>Contraseña: </label>
+          <input type="password" name="password" required />
+
+          <div class="login-option">
+            <button type="submit">Ingresar</button>
+            <input type="checkbox" id="recordarme" checked="checked" />
+            <label for="recordarme">Recordarme</label>
+          </div>
+        </form>
+        <a href="#"> Olvidé mi contraseña </a>
+      </section>
+    </main>
+    <!-- FIN MAIN-->
+
+    <!-- INICIO FOOTER-->
+    <footer class="footer">
+      <nav class="navbar container">
+        <ul class="navbar__item">
+          <li class="navbar__item">
+            <a class="navbar__link" href="../pages/shop.html">SHOP</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../pages/register.html"
+              >REGISTRARSE</a
+            >
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../pages/login.html">LOGIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="../pages/contact.html">CONTACTO</a>
+          </li>
+        </ul>
+        <picture>
+          <img
+            src="../assets/logo/isotype.svg"
+            alt="Isotipo de la marca Funkoshop"
+          />
+        </picture>
+      </nav>
+      <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+
+    <!-- FIN FOOTER-->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/item.js"></script>
+  </body>
+</html>

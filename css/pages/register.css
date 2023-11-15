@@ -1,0 +1,48 @@
+.register-data {
+  display: grid;
+  justify-items: center;
+  padding: 20px;
+}
+.register-data * {
+  padding: var(--spacing-8);
+}
+
+.register-data > h3 {
+  font-family: var(--secundary-font);
+  font-size: var(--font-jumbo);
+  font-weight: 700;
+}
+
+.register-data > p {
+  font-family: var(--secundary-font);
+  font-size: var(--font-large);
+  font-weight: 500;
+}
+
+.register-form {
+  font-size: var(--font-small);
+  font-weight: 400;
+  width: 55%;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+}
+
+.register-form input {
+  border: 0;
+  border-bottom: 2px solid var(--red-solid);
+}
+
+.register-form button {
+  background-color: var(--red-solid);
+  color: white;
+  border: 0;
+  width: 103px;
+  height: 39.06px;
+  margin: 30px;
+}
+
+.register-form a {
+  font-size: 14px;
+  color: #1d84b5;
+}

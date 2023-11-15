@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css");
+
+/*  COMPONENTS */
+@import url("./components/slider.css");
+@import url("./components/buttons.css");
+@import url("./components/card.css");
+@import url("./components/form.css");
+
+/* PAGES */
+@import url("../css/pages/item.css");
+@import url("../css/pages/shop.css");
+@import url("../css/pages/cart.css");
+@import url("../css/pages/login.css");
+@import url("../css/pages/register.css");
+@import url("../css/pages/create.css");
+@import url("../css/pages/edit.css");
+@import url("../css/pages/admin.css");
+@import url("../css/pages/contact.css");
+
+:root {
+  /*Pallete */
+  --red-solid: #ff3333;
+  --red-900: rgba(255, 51, 51, 0.9);
+  --red-500: rgba(255, 51, 51, 0.5);
+  --red-300: rgba(255, 51, 51, 0.3);
+
+  --blue-solid: #1d84b5;
+  --blue-900: rgba(29, 132, 181, 0.9);
+  --blue-500: rgba(29, 132, 181, 0.5);
+  --blue-300: rgba(29, 132, 181, 0.3);
+
+  --gray-solid: #30343f;
+  --gray-900: rgba(48, 52, 63, 0.9);
+  --gray-700: rgba(48, 52, 63, 0.7);
+  --gray-500: rgba(48, 52, 63, 0.5);
+  --gray-300: rgba(48, 52, 63, 0.3);
+
+  --black-solid: #1f1f1f;
+  --black-900: rgba(31, 31, 31, 0.9);
+  --black-500: rgba(31, 31, 31, 0.5);
+  --black-300: rgba(31, 31, 31, 0.3);
+
+  --fucsia-solid: #ff1654;
+  --fucsia-900: rgba(255, 22, 84, 0.9);
+  --fucsia-500: rgba(255, 22, 84, 0.5);
+  --fucsia-300: rgba(255, 22, 84, 0.3);
+
+  --dark-bg-solid: #30343f;
+  --light-bg-solid: #fafaff;
+  --light-font-solid: #ffffff;
+
+  /* Typografias */
+  --principal-font: "Inter", sans-serif;
+  --secundary-font: "Raleway", sans-serif;
+
+  /* Font-sizes */
+  --font-display: 4.6em;
+  --font-jumbo: 3.8em;
+  --font-xlarge: 3em;
+  --font-large: 2.8em;
+  --font-medium: 1.8em;
+  --font-small: 1.6em;
+  --font-xsmall: 1.4em;
+
+  /* Spacings */
+  --spacing-128: 12.8rem;
+  --spacing-68: 6.8rem;
+  --spacing-36: 3.6rem;
+  --spacing-28: 2.8rem;
+  --spacing-24: 2.4rem;
+  --spacing-20: 2rem;
+  --spacing-16: 1.6rem;
+  --spacing-12: 1.2rem;
+  --spacing-8: 0.8rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+  color: #111111;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+header,
+footer {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+}
+
+button {
+  border: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+p {
+  font-size: 1.8em;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--dark-bg-solid);
+  padding: var(--spacing-36);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  max-width: 300px;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-20);
+}
+.navbar__link {
+  font-size: var(--font-medium);
+  padding: var(--spacing-8) var(--spacing-16);
+  display: inline-block;
+  transition: background 0.3s ease-in-out;
+  position: relative;
+}
+
+.navbar__link:hover {
+  background-color: var(--red-900);
+}
+
+.with-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.with-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  width: 300px;
+  position: absolute;
+  background-color: var(--dark-bg-solid);
+  z-index: 3;
+}
+
+.submenu__link {
+  display: block;
+  padding: var(--spacing-8) var(--spacing-16);
+  font-size: var(--font-medium);
+  transition: background 0.3s ease-in-out;
+}
+
+.submenu__link:hover {
+  background-color: var(--red-900);
+}
+
+/*  HERO (BANNER) */
+
+.hero {
+  background-image: url(../assets/img/funkos-banner.webp);
+  padding: var(--spacing-128);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px) brightness(0.9);
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+  align-items: start;
+  z-index: 2;
+  position: relative;
+}
+
+.hero__title {
+  font-family: var(--secundary-font);
+  font-size: var(--font-jumbo);
+  color: var(--light-font-solid);
+}
+
+.hero__text {
+  font-family: var(--secundary-font);
+  color: var(--light-font-solid);
+  font-size: var(--font-medium);
+}
+
+.hero__link {
+  font-family: var(--secundary-font);
+  display: inline-block;
+  font-size: var(--font-medium);
+  background-color: var(--light-bg-solid);
+  padding: var(--spacing-12) var(--spacing-68);
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero__link:hover {
+  background-color: var(--red-900);
+  color: var(--light-font-solid);
+}
+
+/*  COLLECTION  */
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: var(--spacing-16) 0;
+  text-transform: uppercase;
+}
+
+.collection:nth-child(2) .collection__cover {
+  order: -1;
+}
+
+.collection__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+  align-items: start;
+}
+
+.collection__title {
+  font-family: var(--secundary-font);
+  font-size: var(--font-display);
+  font-weight: 500;
+}
+
+.collection__text {
+  font-family: var(--secundary-font);
+  font-size: var(--font-large);
+  font-weight: 300;
+  border-bottom: 2px solid var(--red-solid);
+  padding-bottom: var(--spacing-20);
+}
+
+.collection__link {
+  font-family: var(--secundary-font);
+  display: inline-block;
+  font-size: var(--font-medium);
+  background-color: var(--dark-bg-solid);
+  color: var(--light-font-solid);
+  padding: var(--spacing-16) var(--spacing-36);
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.collection__link:hover {
+  background-color: var(--red-900);
+}
+
+/*  FOOTER  */
+
+.footer {
+  background-color: var(--dark-bg-solid);
+  padding: var(--spacing-68);
+  margin-top: auto;
+}
+
+.footer__copy {
+  font-family: var(--secundary-font);
+  margin-top: var(--spacing-36);
+  text-align: center;
+}
+/*  ANIMATIONS  */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---------------- SHOP ----------------      */

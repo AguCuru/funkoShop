@@ -1,0 +1,102 @@
+.create-main {
+  margin-right: 0;
+}
+
+.create * {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.create > h3 {
+  font-size: var(--font-jumbo);
+  font-family: var(--secundary-font);
+  font-weight: 700;
+  align-items: start;
+  margin: 30px 0;
+}
+
+.create .create-form__item .dropdown {
+  font-size: 24px;
+  font-weight: 300;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.create .create-form-label {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.create .create-form__item > select {
+  color: #b9b9b9;
+  border: 2px;
+  border-color: #30343f;
+  border-style: double;
+  border-radius: 6px;
+  height: 44px;
+  width: 243.03px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 20px;
+  line-height: 44px;
+}
+
+.create .create-form__data-item {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 800px;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.create-form__item {
+  flex-direction: row;
+}
+
+.create-form__data-item .create-form__item > input {
+  color: #b9b9b9;
+  border: 0;
+  border-bottom: 2px solid var(--red-solid);
+  margin: 0 15px;
+  height: 44px;
+}
+
+.create-form__button {
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.create-form button {
+  background-color: var(--red-solid);
+  color: white;
+  border: 0;
+  width: 175px;
+  height: 44.33px;
+  margin-right: 40px;
+
+  line-height: 44px;
+}
+
+.create .data-product {
+  margin: 20px 0;
+}
+
+.create .data-input-nombre-producto {
+  width: 300px;
+}
+
+.create .data-input-stock,
+.create .data-input-descuento {
+  width: 60px;
+}
+
+.create .create-form__item .select-descuento {
+  margin-left: 10px;
+}
+
+.create .create-form .create-form-label__input-img {
+  border: 0 !important;
+  line-height: 48px;
+}
