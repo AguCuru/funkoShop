@@ -1,13 +1,11 @@
 import express from "express";
+import authControllers from "../controllers/authControllers.js";
 
 const router = express.Router();
 
-router.get(`/login`, (req, res) => res.send(`Route for login view`));
-router.post(`/login`, (req, res) => res.send(`Route for post login view`));
-router.get(`/register`, (req, res) => res.send(`Route for register view`));
-
-router.post(`/register`, (req, res) =>
-  res.send(`Route for post register view`)
-);
+router.get(`/login`, authControllers.login);
+router.post(`/login`, authControllers.loginPost);
+router.get(`/register`, authControllers.register);
+router.post(`/register`, authControllers.registerPost);
 
 export default router;
