@@ -4,10 +4,10 @@
 @import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css");
 
 /*  COMPONENTS */
-@import url("./components/slider.css");
-@import url("./components/buttons.css");
-@import url("./components/card.css");
-@import url("./components/form.css");
+@import url("../css/components/slider.css");
+@import url("../css/components/buttons.css");
+@import url("../css/components/card.css");
+@import url("../css/components/form.css");
 
 /* PAGES */
 @import url("../css/pages/item.css");

@@ -1,8 +1,8 @@
 const mainControllers = {
-  home: (req, res) => res.send(`Route for home view from controller`),
-  contact: (req, res) => res.send(`Route for contact view from controller`),
-  about: (req, res) => res.send(`Route for about view from controller`),
-  faqs: (req, res) => res.send(`Route for faqs view from controller`),
+  home: (req, res) => res.render(`index`),
+  contact: (req, res) => res.render(`contact`),
+  about: (req, res) => res.render(`about`),
+  faqs: (req, res) => res.render(`faqs`),
 };
 
 export default mainControllers;
