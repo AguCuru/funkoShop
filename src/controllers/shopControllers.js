@@ -1,5 +1,8 @@
+import productsData from "../../data/products.js";
+import products from "../../data/products.js";
+
 const shopControllers = {
-  shop: (req, res) => res.render(`shop`),
+  shop: (req, res) => res.render(`shop`, { products: productsData.products }),
   itemGet: (req, res) => res.render(`item`),
   itemPost: (req, res) =>
     res.render(

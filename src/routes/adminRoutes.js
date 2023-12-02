@@ -6,8 +6,8 @@ const router = express.Router();
 router.get(`/`, adminControllers.admin);
 router.get(`/create`, adminControllers.createGet);
 router.post(`/create`, adminControllers.createPost);
-router.get(`/edit/:id`, adminControllers.editGet);
-router.put(`/edit/:id`, adminControllers.editPost);
+router.get(`/edit`, adminControllers.editGet);
+router.put(`/edit`, adminControllers.editPost);
 router.delete(`/delete/:id`, adminControllers.delete);
 
 export default router;

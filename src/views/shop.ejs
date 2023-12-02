@@ -106,213 +106,31 @@
       </aside>
       <!-- FIN ASIDE-->
       <section class="items container">
+        <% for(let datos of products){ %>
         <article class="card-item">
           <a class="card-item__link" href="">
             <picture class="card-item__cover">
               <span class="card-item__tag">nuevo</span>
               <img
                 class="card-item__img--front"
-                src="../assets/img/star-wars/trooper-1.webp"
-                alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
+                src="<%= datos.img_front %>"
+                alt="<%= datos.product_name %>"
               />
               <img
                 class="card-item__img--back"
-                src="../assets/img/star-wars/trooper-box.webp"
-                alt="STORMTROOPER LIGHTSABER - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
+                src="<%= datos.img_back %>"
+                alt="<%= datos.product_name %>"
               />
             </picture>
             <div class="card-item__content">
-              <p class="card-item__licence">STAR WARS</p>
-              <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-              <p class="card-item__price">$ 1799,99</p>
+              <p class="card-item__licence"><%= datos.licence_name %></p>
+              <h4 class="card-item__name"><%= datos.product_name %></h4>
+              <p class="card-item__price"><%= datos.product_price %></p>
               <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
             </div>
           </a>
         </article>
-        <article class="card-item">
-          <a class="card-item__link" href="">
-            <picture class="card-item__cover">
-              <span class="card-item__tag">nuevo</span>
-              <img
-                class="card-item__img--front"
-                src="../assets/img/star-wars/trooper-1.webp"
-                alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-              <img
-                class="card-item__img--back"
-                src="../assets/img/star-wars/trooper-box.webp"
-                alt="STORMTROOPER LIGHTSABER - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-            </picture>
-            <div class="card-item__content">
-              <p class="card-item__licence">STAR WARS</p>
-              <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-              <p class="card-item__price">$ 1799,99</p>
-              <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-            </div>
-          </a>
-        </article>
-        <article class="card-item">
-          <a class="card-item__link" href="">
-            <picture class="card-item__cover">
-              <span class="card-item__tag">nuevo</span>
-              <img
-                class="card-item__img--front"
-                src="../assets/img/star-wars/trooper-1.webp"
-                alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-              <img
-                class="card-item__img--back"
-                src="../assets/img/star-wars/trooper-box.webp"
-                alt="STORMTROOPER LIGHTSABER - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-            </picture>
-            <div class="card-item__content">
-              <p class="card-item__licence">STAR WARS</p>
-              <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-              <p class="card-item__price">$ 1799,99</p>
-              <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-            </div>
-          </a>
-        </article>
-        <article class="card-item">
-          <a class="card-item__link" href="">
-            <picture class="card-item__cover">
-              <span class="card-item__tag">nuevo</span>
-              <img
-                class="card-item__img--front"
-                src="../assets/img/star-wars/trooper-1.webp"
-                alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-              <img
-                class="card-item__img--back"
-                src="../assets/img/star-wars/trooper-box.webp"
-                alt="STORMTROOPER LIGHTSABER - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-            </picture>
-            <div class="card-item__content">
-              <p class="card-item__licence">STAR WARS</p>
-              <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-              <p class="card-item__price">$ 1799,99</p>
-              <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-            </div>
-          </a>
-        </article>
-        <article class="card-item">
-          <a class="card-item__link" href="">
-            <picture class="card-item__cover">
-              <span class="card-item__tag">nuevo</span>
-              <img
-                class="card-item__img--front"
-                src="../assets/img/star-wars/trooper-1.webp"
-                alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-              <img
-                class="card-item__img--back"
-                src="../assets/img/star-wars/trooper-box.webp"
-                alt="STORMTROOPER LIGHTSABER - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-            </picture>
-            <div class="card-item__content">
-              <p class="card-item__licence">STAR WARS</p>
-              <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-              <p class="card-item__price">$ 1799,99</p>
-              <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-            </div>
-          </a>
-        </article>
-        <article class="card-item">
-          <a class="card-item__link" href="">
-            <picture class="card-item__cover">
-              <span class="card-item__tag">nuevo</span>
-              <img
-                class="card-item__img--front"
-                src="../assets/img/star-wars/trooper-1.webp"
-                alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-              <img
-                class="card-item__img--back"
-                src="../assets/img/star-wars/trooper-box.webp"
-                alt="STORMTROOPER LIGHTSABER - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-            </picture>
-            <div class="card-item__content">
-              <p class="card-item__licence">STAR WARS</p>
-              <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-              <p class="card-item__price">$ 1799,99</p>
-              <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-            </div>
-          </a>
-        </article>
-        <article class="card-item">
-          <a class="card-item__link" href="">
-            <picture class="card-item__cover">
-              <span class="card-item__tag">nuevo</span>
-              <img
-                class="card-item__img--front"
-                src="../assets/img/star-wars/trooper-1.webp"
-                alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-              <img
-                class="card-item__img--back"
-                src="../assets/img/star-wars/trooper-box.webp"
-                alt="STORMTROOPER LIGHTSABER - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-            </picture>
-            <div class="card-item__content">
-              <p class="card-item__licence">STAR WARS</p>
-              <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-              <p class="card-item__price">$ 1799,99</p>
-              <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-            </div>
-          </a>
-        </article>
-        <article class="card-item">
-          <a class="card-item__link" href="">
-            <picture class="card-item__cover">
-              <span class="card-item__tag">nuevo</span>
-              <img
-                class="card-item__img--front"
-                src="../assets/img/star-wars/trooper-1.webp"
-                alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-              <img
-                class="card-item__img--back"
-                src="../assets/img/star-wars/trooper-box.webp"
-                alt="STORMTROOPER LIGHTSABER - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-            </picture>
-            <div class="card-item__content">
-              <p class="card-item__licence">STAR WARS</p>
-              <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-              <p class="card-item__price">$ 1799,99</p>
-              <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-            </div>
-          </a>
-        </article>
-        <article class="card-item">
-          <a class="card-item__link" href="">
-            <picture class="card-item__cover">
-              <span class="card-item__tag">nuevo</span>
-              <img
-                class="card-item__img--front"
-                src="../assets/img/star-wars/trooper-1.webp"
-                alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-              <img
-                class="card-item__img--back"
-                src="../assets/img/star-wars/trooper-box.webp"
-                alt="STORMTROOPER LIGHTSABER - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
-              />
-            </picture>
-            <div class="card-item__content">
-              <p class="card-item__licence">STAR WARS</p>
-              <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-              <p class="card-item__price">$ 1799,99</p>
-              <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-            </div>
-          </a>
-        </article>
+        <% } %>
       </section>
       <section>
         <span>Paginas siguientes</span>
