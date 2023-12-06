@@ -1,8 +1,17 @@
 import productsData from "../../data/products.js";
-import products from "../../data/products.js";
+
+import products from "../models/products.js";
 
 const shopControllers = {
-  shop: (req, res) => res.render(`shop`, { products: productsData.products }),
+  shop: async (req, res) => {
+    try {
+      const verProducto = await products.getProducts();
+      res.render(`shop`, { products: verProducto });
+    } catch (error) {
+      console.error("Error fetching products:", error);
+      res.status(500).send("Internal Server Error");
+    }
+  },
   itemGet: (req, res) => res.render(`item`),
   itemPost: (req, res) =>
     res.render(

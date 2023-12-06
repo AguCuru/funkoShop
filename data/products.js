@@ -1,5 +1,5 @@
 const products = [
-  {
+  /* {
     product_id: 1,
     licence_name: "Pokemon",
     category_name: "Figuras coleccionables",
@@ -124,7 +124,7 @@ const products = [
     img_front: "/assets/img/harry-potter/luna-1.webp",
 
     img_back: "/assets/img/harry-potter/luna-box.webp",
-  },
+  }, */
 ];
 
 const addProduct = (product) => {
