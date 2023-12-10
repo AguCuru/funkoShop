@@ -10,7 +10,12 @@
     <main class="create-main container">
       <section class="create">
         <h3>CREAR NUEVO ITEM</h3>
-        <form class="create-form" action="" method="">
+        <form
+          class="create-form"
+          action="/admin/create"
+          method="POST"
+          enctype="multipart/form-data"
+        >
           <section class="create-form__data-item">
             <div class="create-form__item">
               <label class="dropdown" for="categoria">Categoría:</label>
@@ -70,13 +75,19 @@
                 <option value="6">6 Cuotas sin interés</option>
               </select>
             </div>
+
             <div class="create-form__item data-product imagen">
               <label class="create-form-label" for="imagen">Imágenes</label>
-              <input class="create-form-label__input-img" type="file" />
+              <input
+                id="imagen"
+                name="imagen"
+                class="create-form-label__input-img"
+                type="file"
+              />
             </div>
 
             <div class="create-form__button">
-              <button>Agregar Producto</button>
+              <button type="submit">Agregar Producto</button>
 
               <button>Limpiar</button>
             </div>

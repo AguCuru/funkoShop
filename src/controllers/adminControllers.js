@@ -1,12 +1,23 @@
+const admin = (req, res) => res.render(`admin`);
+
+const createGet = (req, res) => res.render(`create`);
+
+const createPost = (req, res) => res.render(`create`);
+
+const editGet = (req, res) => res.render(`edit`);
+
+const editPost = (req, res) => res.render(`edit`);
+
+const deleteItem = (req, res) =>
+  res.render(`Route for delete item from controller`);
+
 const adminControllers = {
-  admin: (req, res) => res.render(`admin`),
-  createGet: (req, res) => res.render(`create`),
-  createPost: (req, res) =>
-    res.render(`Route for post create view from controller`),
-  editGet: (req, res) => res.render(`edit`),
-  editPost: (req, res) =>
-    res.render(`Route for send edit item from controller`),
-  delete: (req, res) => res.render(`Route for delete item from controller`),
+  admin,
+  createGet,
+  createPost,
+  editGet,
+  editPost,
+  deleteItem,
 };
 
 export default adminControllers;

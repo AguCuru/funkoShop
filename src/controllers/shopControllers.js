@@ -1,5 +1,3 @@
-import productsData from "../../data/products.js";
-
 import products from "../models/products.js";
 
 const shopControllers = {

@@ -11,24 +11,19 @@
       <section class="register-data container">
         <h3>CREA TU CUENTA</h3>
         <p>Completa el formulario para ser parte del mundo de los Funkos</p>
-        <form class="register-form">
+        <form class="register-form" action="/auth/register" method="POST">
           <label>Nombre: </label>
-          <input type="text" placeholder="Jhon" name="nombre" required />
+          <input type="text" placeholder="Jhon" name="nombre" />
 
           <label>Apellido: </label>
-          <input type="text" placeholder="Doe" name="apellido" required />
+          <input type="text" placeholder="Doe" name="apellido" />
 
           <label>Email: </label>
-          <input
-            type="email"
-            placeholder="jhondoe@correo.com"
-            name="email"
-            required
-          />
+          <input type="email" placeholder="jhondoe@correo.com" name="email" />
           <label>Contraseña: </label>
-          <input type="password" name="password" required />
+          <input type="password" name="password" />
           <label>Repita Contraseña:</label>
-          <input type="password" name="password" required />
+          <input type="password" name="password" />
 
           <button type="submit">Registrar</button>
           <div>
