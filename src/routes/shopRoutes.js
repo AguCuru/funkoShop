@@ -1,19 +1,18 @@
 import express from "express";
-import shopControllers from "../controllers/shopControllers.js";
+import { ShopControllers } from "./../controllers/shopControllers.js";
 
-const router = express.Router();
-
-router.get(`/`, shopControllers.shop);
-
-router.get(`/item/:id`, shopControllers.itemGet);
-
-router.post(`/item/:id/add`, shopControllers.itemPost);
-
-router.get(`/cart`, shopControllers.cartGet);
-
-router.post(`/cart`, shopControllers.cartPost);
-
-export default router;
+export class ShopRoutes {
+  constructor() {
+    this.router = express.Router();
+    this.controllers = new ShopControllers();
+    this.router
+      .get(`/`, this.controllers.getProducts)
+      .get(`/item/:id`, this.controllers.getProductById)
+      .post(`/item/:id/add`, this.controllers.itemPost)
+      .get(`/cart`, this.controllers.cartGet)
+      .post(`/cart`, this.controllers.cartPost);
+  }
+}
 
 /* Shop Routes:
 - GET -> /shop

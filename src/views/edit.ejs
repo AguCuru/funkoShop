@@ -10,82 +10,125 @@
     <main class="edit-main container">
       <section class="edit">
         <h3>EDITAR ITEM</h3>
-        <form class="edit-form" action="" method="">
+        <form
+          class="edit-form"
+          action="/admin/update/<%= product && product.product_id %>?_method=PUT"
+          method="POST"
+          enctype="multipart/form-data"
+        >
           <section class="edit-form__data-item">
-            <div class="edit-form__item">
-              <label class="dropdown" for="categoria">Categoría:</label>
-              <select name="categoria" id="categoria">
-                <option value="STAR WARS">STAR WARS</option>
-                <option value="POKEMON">POKEMON</option>
-                <option value="HARRY POTTER">HARRY POTTER</option>
+            <!-- Otras secciones del formulario -->
+
+            <div class="edit-form__item data-product">
+              <label class="dropdown" for="category_id">Categoría:</label>
+              <select name="category_id" id="category_id">
+                <option value="1">FUNKO</option>
+                <option value="2">REMERA</option>
+                <option value="3">LLAVERO</option>
               </select>
-              <label class="dropdown" for="Licencia">Licencia:</label>
-              <select class="dropdown-select" name="Licencia" id="Licencia">
-                <option value="STAR WARS">STAR WARS</option>
-                <option value="POKEMON">POKEMON</option>
-                <option value="HARRY POTTER">HARRY POTTER</option>
+              <label class="dropdown" for="licence_id">Licencia:</label>
+              <select class="dropdown-select" name="licence_id" id="licence_id">
+                <option value="1">POKEMON</option>
+                <option value="2">STAR WARS</option>
+                <option value="3">HARRY POTTER</option>
               </select>
             </div>
+
             <div class="edit-form__item data-product">
-              <label class="edit-form-label" for="nombreProducto"
+              <label class="edit-form-label" for="product_name"
                 >Nombre del producto:</label
               >
               <input
                 class="data-input-nombre-producto"
                 type="text"
-                placeholder="Kakashi Hatake Shippuden Saga"
+                name="product_name"
+                value="<%= product.product_name %>"
               />
             </div>
+
             <div class="edit-form__description-product">
               <textarea
-                name="textarea"
+                name="product_description"
                 rows="10"
                 cols="80"
                 placeholder="Descripcion del producto"
               >
-descripcion del producto            
-              </textarea>
+<%= product.product_description %></textarea
+              >
+            </div>
+
+            <div class="edit-form__item data-product">
+              <label class="edit-form-label" for="product_sku">SKU:</label>
+              <input
+                class="data-input"
+                type="text"
+                name="product_sku"
+                value="<%= product.product_sku %>"
+              />
+            </div>
+
+            <div class="edit-form__item data-product">
+              <label class="edit-form-label" for="product_price">Precio:</label>
+              <input
+                class="data-input"
+                type="text"
+                name="product_price"
+                value="<%= product.product_price %>"
+              />
             </div>
             <div class="edit-form__item data-product">
-              <label class="edit-form-label" for="sku">SKU:</label>
-              <input class="data-input" type="text" />
+              <label class="edit-form-label" for="product_stock">Stock:</label>
+              <input
+                class="data-input-stock"
+                type="text"
+                name="product_stock"
+              />
             </div>
             <div class="edit-form__item data-product">
-              <label class="edit-form-label" for="precio">Precio:</label>
-              <input class="data-input" type="text" />
+              <label class="edit-form-label" for="product_discount"
+                >Descuento:</label
+              >
+              <input
+                class="data-input-descuento"
+                type="number"
+                name="product_discount"
+              />
             </div>
             <div class="edit-form__item data-product">
-              <label class="edit-form-label" for="stock">Stock:</label>
-              <input class="data-input-stock" type="text" />
-            </div>
-            <div class="edit-form__item data-product">
-              <label class="edit-form-label" for="sku">Descuento:</label>
-              <input class="data-input-descuento" type="number" />
-            </div>
-            <div class="edit-form__item data-product">
-              <label class="edit-form-label" for="cuotas">Cuotas:</label>
-              <select class="select-descuento" name="cuotas" id="cuotas">
+              <label class="edit-form-label" for="product_dues">Cuotas:</label>
+              <select
+                class="select-descuento"
+                name="product_dues"
+                id="product_dues"
+              >
                 <option value="1">1 Cuota sin interés</option>
                 <option value="3">3 Cuotas sin interés</option>
                 <option value="6">6 Cuotas sin interés</option>
               </select>
             </div>
+
+            <!-- Otros campos del formulario -->
+
             <div class="edit-form__item data-product imagen">
-              <label class="edit-form-label" for="imagen">Imágenes</label>
-              <input class="edit-form-label__input-img" type="file" />
+              <label class="edit-form-label" for="img_front">Imágen 1</label>
+              <input
+                id="img_front"
+                name="img_front"
+                class="edit-form-label__input-img"
+                type="file"
+              />
             </div>
 
-            <div class="edit-form__item">
-              <picture class="edit-img">
-                <img src="../assets/img/harry-potter/harry-1.webp" alt="" />
-                <p>Frente</p>
-              </picture>
-
-              <picture class="edit-img">
-                <img src="../assets/img/harry-potter/harry-box.webp" alt="" />
-                <p>Dorso</p>
-              </picture>
+            <div class="edit-form__item data-product imagen">
+              <label class="edit-form-label" for="img_back">Imágen 2</label>
+              <input
+                id="img_back"
+                name="img_back"
+                class="create-form-label__input-img"
+                type="file"
+              />
             </div>
+            <!--    <input type="hidden" name="_method" value="PUT" /> -->
             <div class="edit-form__item edit-form__button">
               <button>Modificar Producto</button>
             </div>

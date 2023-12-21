@@ -1,12 +1,23 @@
-const login = (req, res) => res.render(`login`);
+const title = "Funko";
 
-const loginPost = (req, res) => res.render(`index`);
+/* export class AuthControllers {
+  constructor() {
+    this.services = new UserServices()
+  }
+} */
 
-const register = (req, res) => res.render(`register`);
+const login = (req, res) => res.render(`login`, { title: "Funko | Login " });
 
-const registerPost = (req, res) => res.render(`register`);
+const loginPost = (req, res) =>
+  res.render(`index`, { title: "Funko | Login " });
 
-const logout = (req, res) => res.render(`index`);
+const register = (req, res) =>
+  res.render(`register`, { title: "Funko | Register " });
+
+const registerPost = (req, res) =>
+  res.render(`register`, { title: "Funko | Register " });
+
+const logout = (req, res) => res.render(`index`, { title: "Funko | Logout " });
 
 const authControllers = {
   login,

@@ -1,28 +1,39 @@
+import fs from "fs";
 import multer from "multer";
-import { resolve, extname } from "path";
+import { resolve, extname, join } from "path";
+import { v4 as uuidv4 } from "uuid";
+import { ProductsServices } from "./../services/productsServices.js";
+
+const productsServices = new ProductsServices();
 
 const destination = (req, file, cb) => {
-  cb(null, resolve() + "/public/assets/img");
+  try {
+    const { licence_id } = req.body;
+    const licenceName = productsServices.getLicenceNameById(licence_id);
+
+    // Obtener la ruta del directorio de imágenes
+    const imgDir = join("public", "assets", "img", licenceName.toLowerCase());
+
+    // Construir la ruta completa al directorio de imágenes
+    const licenceFolderPath = resolve(imgDir);
+
+    // Verificar si el directorio existe, si no, crearlo
+    if (!fs.existsSync(licenceFolderPath)) {
+      fs.mkdirSync(licenceFolderPath, { recursive: true });
+    }
+
+    cb(null, licenceFolderPath);
+  } catch (error) {
+    cb(error);
+  }
 };
 
 const filename = (req, file, cb) => {
-  console.log(
-    "Extensión del archivo:",
-    extname(file.originalname).toLowerCase()
-  );
-
-  const allowedExtensions = [".jpg", ".jpeg"];
-
-  if (allowedExtensions.includes(extname(file.originalname).toLowerCase())) {
-    const time = new Date()
-      .toString()
-      .replace(/ /g, "_")
-      .replace(/:/g, "-")
-      .slice(0, 33);
-    cb(null, time + "_" + file.originalname);
-  } else {
-    cb(new Error("Solo se admiten archivos JPG o JPEG."));
-  }
+  const originalName = file.originalname.replace(/\s+/g, "_");
+  const shortId = uuidv4().split("-")[0];
+  const fileExtension = extname(file.originalname);
+  const uniqueFilename = `${originalName}_${shortId}${fileExtension}`;
+  cb(null, uniqueFilename);
 };
 
 const config = { destination, filename };

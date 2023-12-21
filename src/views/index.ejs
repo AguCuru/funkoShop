@@ -66,102 +66,7 @@
           />
         </picture>
       </section>
-      <section class="slider container glide">
-        <h2 class="slider__title">Últimos lanzamientos</h2>
-        <div class="glide__track" data-glide-el="track">
-          <ul class="slider__items glide__slides">
-            <li class="slider__item glide__slide">
-              <article class="card-item">
-                <a class="card-item__link" href="../shop">
-                  <picture class="card-item__cover">
-                    <span class="card-item__tag">nuevo</span>
-                    <img
-                      class="card-item__img--front"
-                      src="./assets/img/star-wars/trooper-1.webp"
-                      alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
-                    />
-                    <img
-                      class="card-item__img--back"
-                      src="./assets/img/star-wars/trooper-box.webp"
-                      alt="STORMTROOPER LIGHTSABER - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
-                    />
-                  </picture>
-                  <div class="card-item__content">
-                    <p class="card-item__licence">STAR WARS</p>
-                    <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-                    <p class="card-item__price">$ 1799,99</p>
-                    <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-                  </div>
-                </a>
-              </article>
-            </li>
-            <li class="slider__item glide__slide">
-              <article class="card-item">
-                <a class="card-item__link" href="../shop">
-                  <picture class="card-item__cover">
-                    <span class="card-item__tag">nuevo</span>
-                    <img
-                      class="card-item__img--front"
-                      src="./assets/img/pokemon/pidgeotto-1.webp"
-                      alt="Pidgeotto - Figura colleccionable Funko de Grogu de la serie Pokemon"
-                    />
-                    <img
-                      class="card-item__img--back"
-                      src="./assets/img/pokemon/pidgeotto-box.webp"
-                      alt="Pidgeotto - Caja de la figura colleccionable Funko de Grogu de la serie Pokemon"
-                    />
-                  </picture>
-                  <div class="card-item__content">
-                    <p class="card-item__licence">POKEMON</p>
-                    <h4 class="card-item__name">PIDGEOTTO</h4>
-                    <p class="card-item__price">$ 1799,99</p>
-                    <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-                  </div>
-                </a>
-              </article>
-            </li>
-            <li class="slider__item glide__slide">
-              <article class="card-item">
-                <a class="card-item__link" href="../shop">
-                  <picture class="card-item__cover">
-                    <span class="card-item__tag">nuevo</span>
-                    <img
-                      class="card-item__img--front"
-                      src="./assets/img/harry-potter/luna-1.webp"
-                      alt="Luna Lovegood Lion Mask - Figura colleccionable Funko de Grogu de la serie Star Wars"
-                    />
-                    <img
-                      class="card-item__img--back"
-                      src="./assets//img/harry-potter/luna-box.webp"
-                      alt="Luna Lovegood Lion Mask - Caja de la figura colleccionable Funko de Grogu de la serie Star Wars"
-                    />
-                  </picture>
-                  <div class="card-item__content">
-                    <p class="card-item__licence">HARRY POTTER</p>
-                    <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
-                    <p class="card-item__price">$ 1799,99</p>
-                    <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-                  </div>
-                </a>
-              </article>
-            </li>
-          </ul>
-        </div>
-        <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir=">">
-            <iconify-icon
-              icon="mdi:chevron-right"
-              rotate="180deg"
-            ></iconify-icon>
-          </button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            <iconify-icon
-              icon="mdi:chevron-left"
-              rotate="180deg"
-            ></iconify-icon>
-          </button>
-        </div>
-      </section>
+      <%- include('./partials/slider.ejs') %>
     </main>
     <!-- FIN MAIN-->
 
@@ -174,9 +79,8 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/main.js"></script>
-
+    <script src="/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script src="./js/glides.js"></script>
+    <script src="/js/glides.js"></script>
   </body>
 </html>

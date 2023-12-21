@@ -27,7 +27,9 @@
           <h2>LISTADO DE PRODUCTOS</h2>
           <span>AGREGAR</span>
           <button>
-            <iconify-icon icon="ph:plus-fill"></iconify-icon>
+            <a href="/admin/create">
+              <iconify-icon icon="ph:plus-fill"></iconify-icon>
+            </a>
           </button>
         </div>
         <section>
@@ -43,30 +45,40 @@
               </tr>
             </thead>
             <tbody>
+              <% products.forEach(product => { %>
               <tr>
-                <td>1</td>
-                <td>STW001001</td>
-                <td>Baby Yoda Blueball</td>
-                <td>STAR WARS</td>
+                <td><%= product.product_id %></td>
+                <td><%= product.product_sku %></td>
+                <td><%= product.product_name %></td>
+                <td><%= product.category_name %></td>
                 <td>
-                  <button>
-                    <a href="../admin/edit" aria-label="Editar producto">
+                  <a
+                    href="/admin/update/<%= product.product_id %>"
+                    aria-label="Editar producto"
+                  >
+                    <button>
                       <img
-                        src="../assets/icons/edit_pencil.svg"
+                        src="/assets/icons/edit_pencil.svg"
                         alt="icono de lapicera para editar"
                       />
-                    </a>
-                  </button>
+                    </button>
+                  </a>
                 </td>
                 <td>
-                  <button>
-                    <img
-                      src="../assets/icons/delete_trash.svg"
-                      alt="cesto de basura para eliminar"
-                    />
-                  </button>
+                  <form
+                    action="/admin/delete/<%= product.product_id %>?_method=DELETE"
+                    method="POST"
+                  >
+                    <button type="submit">
+                      <img
+                        src="/assets/icons/delete_trash.svg"
+                        alt="cesto de basura para eliminar"
+                      />
+                    </button>
+                  </form>
                 </td>
               </tr>
+              <% }); %>
             </tbody>
           </table>
         </section>

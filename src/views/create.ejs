@@ -18,58 +18,77 @@
         >
           <section class="create-form__data-item">
             <div class="create-form__item">
-              <label class="dropdown" for="categoria">Categoría:</label>
-              <select name="categoria" id="categoria">
-                <option value="STAR WARS">STAR WARS</option>
-                <option value="POKEMON">POKEMON</option>
-                <option value="HARRY POTTER">HARRY POTTER</option>
+              <label class="dropdown" for="category_id">Categoría:</label>
+              <select name="category_id" id="category_id">
+                <option value="1">FUNKO</option>
+                <option value="2">REMERA</option>
+                <option value="3">LLAVERO</option>
               </select>
-              <label class="dropdown" for="Licencia">Licencia:</label>
-              <select class="dropdown-select" name="Licencia" id="Licencia">
-                <option value="STAR WARS">STAR WARS</option>
-                <option value="POKEMON">POKEMON</option>
-                <option value="HARRY POTTER">HARRY POTTER</option>
+              <label class="dropdown" for="licence_id">Licencia:</label>
+              <select class="dropdown-select" name="licence_id" id="licence_id">
+                <option value="1">POKEMON</option>
+                <option value="2">STAR WARS</option>
+                <option value="3">HARRY POTTER</option>
               </select>
             </div>
             <div class="create-form__item data-product">
-              <label class="create-form-label" for="nombreProducto"
+              <label class="create-form-label" for="product_name"
                 >Nombre del producto:</label
               >
               <input
                 class="data-input-nombre-producto"
                 type="text"
+                name="product_name"
                 placeholder="Kakashi Hatake Shippuden Saga"
               />
             </div>
             <div class="create-form__description-product">
               <textarea
-                name="textarea"
+                name="product_description"
                 rows="10"
                 cols="80"
                 placeholder="Descripcion del producto"
+              ></textarea>
+            </div>
+            <div class="create-form__item data-product">
+              <label class="create-form-label" for="product_sku">SKU:</label>
+              <input class="data-input" type="text" name="product_sku" />
+            </div>
+            <div class="create-form__item data-product">
+              <label class="create-form-label" for="product_price"
+                >Precio:</label
               >
-  descripcion del producto            
-              </textarea>
+              <input class="data-input" type="text" name="product_price" />
             </div>
             <div class="create-form__item data-product">
-              <label class="create-form-label" for="sku">SKU:</label>
-              <input class="data-input" type="text" />
+              <label class="create-form-label" for="product_stock"
+                >Stock:</label
+              >
+              <input
+                class="data-input-stock"
+                type="text"
+                name="product_stock"
+              />
             </div>
             <div class="create-form__item data-product">
-              <label class="create-form-label" for="precio">Precio:</label>
-              <input class="data-input" type="text" />
+              <label class="create-form-label" for="product_discount"
+                >Descuento:</label
+              >
+              <input
+                class="data-input-descuento"
+                type="number"
+                name="product_discount"
+              />
             </div>
             <div class="create-form__item data-product">
-              <label class="create-form-label" for="stock">Stock:</label>
-              <input class="data-input-stock" type="text" />
-            </div>
-            <div class="create-form__item data-product">
-              <label class="create-form-label" for="sku">Descuento:</label>
-              <input class="data-input-descuento" type="number" />
-            </div>
-            <div class="create-form__item data-product">
-              <label class="create-form-label" for="cuotas">Cuotas:</label>
-              <select class="select-descuento" name="cuotas" id="cuotas">
+              <label class="create-form-label" for="product_dues"
+                >Cuotas:</label
+              >
+              <select
+                class="select-descuento"
+                name="product_dues"
+                id="product_dues"
+              >
                 <option value="1">1 Cuota sin interés</option>
                 <option value="3">3 Cuotas sin interés</option>
                 <option value="6">6 Cuotas sin interés</option>
@@ -77,10 +96,20 @@
             </div>
 
             <div class="create-form__item data-product imagen">
-              <label class="create-form-label" for="imagen">Imágenes</label>
+              <label class="create-form-label" for="img_front">Imágen 1</label>
               <input
-                id="imagen"
-                name="imagen"
+                id="img_front"
+                name="img_front"
+                class="create-form-label__input-img"
+                type="file"
+              />
+            </div>
+
+            <div class="create-form__item data-product imagen">
+              <label class="create-form-label" for="img_back">Imágen 2</label>
+              <input
+                id="img_back"
+                name="img_back"
                 class="create-form-label__input-img"
                 type="file"
               />
@@ -88,7 +117,6 @@
 
             <div class="create-form__button">
               <button type="submit">Agregar Producto</button>
-
               <button>Limpiar</button>
             </div>
           </section>
@@ -108,5 +136,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/item.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </body>
 </html>
