@@ -1,0 +1,44 @@
+<section class="slider container glide">
+  <h2 class="slider__title">PRODUCTOS RELACIONADOS</h2>
+  <div class="glide__track" data-glide-el="track">
+    <ul class="slider__items glide__slides">
+      <% for (let product of products) { %>
+      <li class="slider__item glide__slide">
+        <article class="card-item slider__item glide__slide">
+          <a class="card-item__link" href="">
+            <picture class="card-item__cover">
+              <span class="card-item__tag">nuevo</span>
+              <img
+                class="card-item__img--front"
+                src="<%= product.img_front  %>"
+                alt="STORMTROOPER LIGHTSABER - Figura colleccionable Funko de Grogu de la serie Star Wars"
+              />
+              <img
+                class="card-item__img--back"
+                src="<%= product.img_back  %>"
+                alt="<%= product.product_description%>"
+              />
+            </picture>
+            <div class="card-item__content">
+              <p class="card-item__licence"><% product.licence_name %></p>
+              <h4 class="card-item__name"><% product.product_name %></h4>
+              <p class="card-item__price">$ <%= product.product_price %>></p>
+              <p class="card-item__promo">
+                <%= product.product_dues %> CUOTAS SIN INTERÉS
+              </p>
+            </div>
+          </a>
+        </article>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="glide__arrows" data-glide-el="controls">
+    <button class="glide__arrow glide__arrow--left" data-glide-dir=">">
+      <iconify-icon icon="mdi:chevron-right" rotate="180deg"></iconify-icon>
+    </button>
+    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+      <iconify-icon icon="mdi:chevron-left" rotate="180deg"></iconify-icon>
+    </button>
+  </div>
+</section>
