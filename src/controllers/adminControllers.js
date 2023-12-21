@@ -82,20 +82,23 @@ export class AdminControllers {
 
   // ... (otros métodos del controlador)
 
-  updProduct = async (productId, updatedData) => {
+  updProduct = async (req, res) => {
     try {
-      const [rowsUpdated, [updatedProduct]] = await Product.update(
-        updatedData,
-        {
-          where: { id: productId },
-          returning: true, // Esto devuelve el producto actualizado
-        }
-      );
+      const productId = req.params.id;
+      const product = await this.services.getProductById(productId);
 
-      return updatedProduct;
+      if (!product) {
+        res.status(404).send("Product not found");
+        return;
+      }
+
+      res.render("edit", {
+        title: "Funko | Edit",
+        product,
+      });
     } catch (error) {
-      console.error("Error updating product:", error);
-      throw error;
+      console.error("Error fetching product for edit:", error);
+      res.status(500).send("Internal Server Error");
     }
   };
   updProductPut = async (req, res) => {
